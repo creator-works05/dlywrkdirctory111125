@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let signupName="s";
+        let signupPassword="123";
+        let loginName,loginPassword;
+        alert("Login section ");
+        loginName=prompt("Enter your username");
+        loginPassword=prompt("Enter your password");
+        let checkName,checkPassword,checkIf;
+        checkName=signupName!=loginName;
+        checkPassword=signupPassword!=loginPassword;
+        checkIf=signupName!=loginName||signupPassword!=loginPassword;
+        if(signupName!=loginName||signupPassword!=loginPassword){
+            alert("Login failed");
+             alert(`usernameNotmatch: ${checkName}, passwordNotmatch: ${checkPassword}, ifCheck: ${checkIf}`);
+        }
+        else{
+            alert("login successful");
+            let elseCheck= !checkIf;
+            alert(`usernameNotmatch: ${checkName}, passwordNotmatch: ${checkPassword}, ifCheck: ${checkIf}, elsecheck: ${elseCheck}`);
+        }
+
+        prompt("Enter any key to exit");
+        exit();
+    </script>
+</body>
+</html>

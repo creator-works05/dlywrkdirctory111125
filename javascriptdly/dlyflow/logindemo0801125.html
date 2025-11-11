@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let signupName = "Mohanlal";
+        let signupPassword = "Lelu@123";
+        alert("login page");
+        let loginName, loginPassword;
+        loginName = prompt("Enter your login name");
+        let checkName;
+        // alert(` ${checkName=loginName==signupName}`);
+        checkName = loginName == signupName;
+        if (checkName == true) {
+            // alert("next phase unlocked")
+            loginPassword = prompt("Enter your login password");
+            let checkPass = signupPassword == loginPassword;
+            if (checkPass == true) {
+                alert("login attempt succeeded");
+                alert(`Next phase unlocked,Well done Mr.${signupName}`);
+            }
+            else {
+                alert("password is incorrect")
+                prompt("Enter any key to exit");
+                exit();
+            }
+        }
+        else {
+            alert("login failed");
+            prompt("Enter any key to exit")
+            exit();
+            alert("Checking if exit() works");
+        }
+    </script>
+</body>
+
+</html>
