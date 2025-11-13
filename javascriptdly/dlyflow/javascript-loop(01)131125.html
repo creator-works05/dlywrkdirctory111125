@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert("Working of all loops in javascript");
+
+        alert("list your favorite actors in World cinema ( higher priority first)");
+        let industry=[],actors=[],n=true,nmno=0,lstno=1;
+        for(let i=0;n===true;i++){
+            let actrName,industryName;
+            // if(i==0){
+            //  lstno=1;
+            // nmno=0;
+            
+            // }
+           
+            actrName=prompt(`Enter actor full name, for ${lstno} position on the list`)
+             lstno++;
+            industryName=prompt(`Who belongs to which industry, eg: Mollywood`)
+            actors[nmno]=actrName;
+            industry[nmno]=industryName;
+            nmno++;
+            let entrycontrol=prompt("Click > symbol if you want to continue with the next entry, for stop click any other key");
+            if(entrycontrol==='>'){
+                n=true;
+            }
+            else{
+                n=false;
+            }
+        }
+        alert("your list is here");
+        let j=1;
+        for(let i=0;i<actors.length;i++){
+            function mylist(){
+                
+                console.log(`${j} .${actors[i]} (${industry[i]})`);
+                j++;
+            }
+            mylist();
+        }
+
+    </script>
+</body>
+</html>
