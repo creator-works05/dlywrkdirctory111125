@@ -38,12 +38,17 @@
         for(let i=0;i<actors.length;i++){
             function mylist(){
                 
-                console.log(`${j} .${actors[i]} (${industry[i]})`);
+                console.log(`${j}. ${mycase2(actors[i])} (${mycase(industry[i])})`);
                 j++;
             }
             mylist();
         }
-
+        function mycase( thisstring){
+            return thisstring.charAt(0).toUpperCase()+thisstring.slice(1).toUpperCase();
+        }
+        function mycase2( thisstring){
+            return thisstring.charAt(0).toUpperCase()+thisstring.slice(1).toLowerCase();
+        }
     </script>
 </body>
 </html>
