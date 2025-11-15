@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let names=["Mohanlal", "Mammotty", "Suresh Gopi", "Dileep"];
+
+        console.log("printing the array names(without any modification).");
+        console.log("============================================================================================");
+        console.log(names);
+        console.log("============================================================================================");
+        console.log();
+        console.log("Using push() function to append some new elements at the end of the array ");
+        console.log("--------------------------------------------------------------------------------------------");
+        console.log("Pushing Murali and Thilakan at the end of the array, names.push()");
+        names.push("Murali","Thilakan");
+        console.log(names.toString());
+        console.log(names);
+        console.log("--------------------------------------------------------------------------------------------")
+        console.log("Using pop() function to remove some new elements from the end of the array");
+        console.log("--------------------------------------------------------------------------------------------")
+        console.log("pushing Thilakan, the last element, names.pop()");
+        names.pop();
+        console.log(names.toString());
+        console.log(names);
+        console.log("--------------------------------------------------------------------------------------------")
+        console.log("Using unshift function to append some elements at the beginning of that array");
+        console.log("--------------------------------------------------------------------------------------------")
+        console.log("adding Jagathy Sreekumar and Thilakan at the beginning of that array, names.unshift()");
+        names.unshift("Jagathy Sreekumar","Thilakan");
+        console.log(names.toString());
+        console.log(names);
+        console.log("--------------------------------------------------------------------------------------------")
+        console.log("Using shift function to remove some elements from the beginning of the array.");
+        console.log("--------------------------------------------------------------------------------------------")
+        console.log("removing the first element Jagathy Sreekumar, names.shift()");
+        names.shift();
+        console.log(names.toString());
+        console.log(names);
+        console.log("--------------------------------------------------------------------------------------------")
+        console.log("Using concat to merge two arrays and put into a new array,It doesn't modify the array itself.");
+        console.log("--------------------------------------------------------------------------------------------")
+        console.log("Creating new array, otherNames.");
+        let othernames=["Prithviraj","Vijay","Allu Arjun","Nani","Chiyaan Vikram ","Jagathy Sreekumar","Jayasurya","Indrajith","Barath Gopi"];
+        console.log("The othernames:",othernames);
+        console.log("Concatenation of array. new array: afterConcate. afterConcat=names.concat(othernames)");
+        let afterConcat=names.concat(othernames);
+        console.log("print afterConcat: ",afterConcat);
+        console.log("--------------------------------------------------------------------------------------------")
+        console.log("Using slice function  to trim out specific portion of the array,this doesn't modify the array itself");
+        console.log("--------------------------------------------------------------------------------------------")
+        console.log("Creating new array afterSlice to store the slice modification, afterSlice=afterConcat.slice(0,7)+afterConcat.slice(11,15)");
+        let afterSlice= afterConcat.slice(0,7).concat(afterConcat.slice(11,15));
+        console.log("print afterSlice")
+        console.log(afterSlice);
+
+
+
+
+        
+    </script>
+</body>
+</html>
