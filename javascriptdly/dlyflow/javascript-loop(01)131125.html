@@ -49,6 +49,24 @@
         function mycase2( thisstring){
             return thisstring.charAt(0).toUpperCase()+thisstring.slice(1).toLowerCase();
         }
+
+        console.log("------------------------------------------------------------------------------------------");
+        console.log("Using forEach function to fetch the array elements from the array actors");
+        
+        actors.forEach((actor,i)=>{
+            
+
+            console.log(i+1,"."," element :",actor," index :",i);
+            n++;
+
+        })
+        console.log("--------------------------------------------------------------------------------------------");
+        console.log("Using for of loop")
+        console.log("To print the array industry");
+        for(let indstry of industry){
+           console.log(indstry)
+        
+        }
     </script>
 </body>
 </html>

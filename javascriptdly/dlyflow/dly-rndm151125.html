@@ -57,7 +57,24 @@
         let afterSlice= afterConcat.slice(0,7).concat(afterConcat.slice(11,15));
         console.log("print afterSlice")
         console.log(afterSlice);
+        console.log("--------------------------------------------------------------------------------------------")
 
+        console.log("Adding new elements in an array the array initialization");
+        console.log("--------------------------------------------------------------------------------------------")
+        console.log("Using ...ArrayName");
+        afterSlice=[...afterSlice,"Jayaram"];
+        console.log(afterSlice);
+        console.log("--------------------------------------------------------------------------------------------")
+        console.log("Using foreach method on arrays. It is similar to the functionality of the for loop, but it is characterized by as a method");
+        console.log("--------------------------------------------------------------------------------------------")
+        console.log("Print names array using forEach method, forEach(element, index, array)");
+        names.forEach((name,i,array)=>{
+            console.log("Element Name : ",name," Index :",i,"Array =>  ",array.toString());
+        });
+        console.log("--------------------------------------------------------------------------------------------")
+        console.log("Using splice method on an array ");
+        console.log("--------------------------------------------------------------------------------------------")
+        console.log("Adding new elements ")
 
 
 
