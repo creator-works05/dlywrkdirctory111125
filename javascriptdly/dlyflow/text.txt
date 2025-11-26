@@ -1,0 +1,18 @@
+ b i w blue indigo white
+ b w i blue white indigo
+ w b i white blue indigo
+ w i b white indigo blue
+ i w b indigo white blue
+ i b w indigo blue white
+
+ b i w blue indigo white
+ b w i blue white indigo
+ i b w indigo blue white
+ i w b indigo white blue
+ w b i white blue indigo
+ w i b white indigo blue
+
+ 5 w
+ 3 e
+ 2 r
+ 1

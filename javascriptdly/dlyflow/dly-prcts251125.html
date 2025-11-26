@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting elements</title>
+</head>
+<body>
+    <h1 id="head">Hello</h1>
+    <h1 id="head">World</h1>
+    <p>This is an example of selecting elements using javascript </p>
+    <div class="box"><h1></h1></div>
+    <script>
+        console.log("METHOD : getElementById()");
+        console.log(document.getElementById("head"));
+        console.log("Multiple element selection : not possible  \n priority : if there is multiple element with same id it will choose the top one from the document and stop further advancing for traversal ");
+        console.log("---------------------------------------------------------------------------------------");
+        console.log("METHOD : getElementsByClassName() ");
+        console.log(document.getElementsByClassName("box"));
+        console.log(`Multiple element selection : possible, Because it traverse through the entire document even if 
+        it finds a match in between  `);
+        console.log("---------------------------------------------------------------------------------------");
+        console.log("METHOD : getElementsByTagName()");
+        console.log(document.getElementsByTagName("p"));
+        console.log("Multiple element selection is possible, and it will return a html elements list")
+
+
+
+        
+
+    </script>
+</body>
+</html>
