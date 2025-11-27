@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style> 
+        .forDay{
+            background-color:white;
+            color:black;
+            outline:2px solid grey;
+            width:80vw;
+            height:80vh;
+            
+            
+        }
+        .forDark{
+            background-color:black;
+            color:white;
+
+        }
+    </style>
+<body>
+    <div id="divbox" class="forDay">
+        <h1> Hello world </h1>
+        <p> testing dark theme and day theme</p>
+    </div>
+    <button id="modebutton" onclick="setTheme()">Dark mode</button>
+    <script>
+        let divbox= document.querySelector("#divbox");
+        let modebutton= document.querySelector("#modebutton");
+        function setTheme(){
+            if(divbox.classList.contains("forDark")){
+                divbox.classList.toggle("forDark");
+                modebutton.textContent="Dark Mode";
+            }
+            else{
+                divbox.classList.toggle("forDark");
+                modebutton.textContent="Day mode";
+            }
+
+            
+        }
+        
+    </script>
+</body>
+</html>

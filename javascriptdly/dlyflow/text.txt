@@ -1,18 +1,24 @@
- b i w blue indigo white
- b w i blue white indigo
- w b i white blue indigo
- w i b white indigo blue
- i w b indigo white blue
- i b w indigo blue white
+ b i w black indigo white
+ b w i black white indigo
+ w b i white black indigo
+ w i b white indigo black
+ i w b indigo white black
+ i b w indigo black white
 
- b i w blue indigo white
- b w i blue white indigo
- i b w indigo blue white
- i w b indigo white blue
- w b i white blue indigo
- w i b white indigo blue
+ b i w black indigo white
+ b w i black white indigo
+ i b w indigo black white
+ i w b indigo white black
+ w b i white black indigo
+ w i b white indigo black
 
  5 w
  3 e
  2 r
  1
+
+ 5C5=1
+ 5P5=120/1=120
+
+ when you press a button changes will be affected as you defined in a code along with changes in button 
+ 

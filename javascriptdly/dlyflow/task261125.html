@@ -13,32 +13,32 @@
         @keyframes animate {
             0%{
             background-color:black;
-            outline: 2px solid indigo;
+            outline: 3px solid indigo;
             color:white;
              font-size: xx-large;
 
             }
             25%{
-            background-color:black;
-            outline: 2px solid white;
-            color:indigo;
+            background-color:indigo;
+            outline: 3px solid black;
+            color:white;
              font-size: x-large;
             }
             50%{
             background-color:white;
-            outline: 2px solid indigo;
-            color:black;
+            outline: 3px solid black;
+            color:indigo;
              font-size: xx-large;
             }
             75%{
-            background-color:indigo;
-            outline: 2px solid black;
-            color:white;
+            background-color:white;
+            outline: 3px solid indigo;
+            color: black;
              font-size: x-large;
             }
             100%{
             background-color:black;
-            outline: 2px solid indigo;
+            outline: 3px solid indigo;
             color:white;
              font-size: xx-large;
             }
@@ -55,6 +55,7 @@
         // set id attribute to the first h1 from the document
         //selecting the element using created id
         let headscnd=document.querySelector("#head");
+        console.log(headscnd);
         function foradd(){
             headscnd.setAttribute("class","heading");
 
