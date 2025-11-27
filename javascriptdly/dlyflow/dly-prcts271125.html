@@ -4,11 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>addEventListners()</title>
+    <style>
+        .divbox{
+            font-size:xx-large ;
+        }
+    </style>
 </head>
 <body>
     <div>
         <h1>Adding event listner</h1>
         <p>Checking how does addEventListner() method work</p>
     </div>
+    <script>
+        let divboxid = document.querySelector("div");
+        divboxid.setAttribute("id","divboxid");
+        divboxid.setAttribute("class","divbox");
+        divboxid.style.backgroundColor="red";
+        let st= divboxid.style;
+        st.textAlign="center";
+        document.addEventListener("dblclick",()=>{
+            alert("You double clicked on this page");
+            console.log("You double clicked on this page");
+
+        });
+        window.addEventListener("load",()=>alert("Hey, you again"));
+        
+
+    </script>
 </body>
 </html>
