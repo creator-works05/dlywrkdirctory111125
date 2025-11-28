@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup page </title>
+</head>
+<body>
+    <form id="frm" action="./task-login-281125.html">
+        <label for="name">username :</label>
+        <input type="text" name="username" placeholder="Enter Name" id="name">
+        <br><br>
+        <label for="email">Email :</label>
+        <input type="email" name="email" placeholder="Enter Email" id="email">
+        <br><br>
+        <label for="password">Password :</label>
+        <input type="password" name="password" placeholder="Enter password" id="password">
+        <br><br>
+        <label for="cpassword">Confirm Password :</label>
+        <input type="password" name="cpassword" placeholder="Confirm password" id="cpassword">
+        <br><br>
+        
+        
+    </form>
+    <button id="sbmt" > submit</button>
+    <script>
+        let frm= document.querySelector("#frm");
+        let sbmt =document.querySelector("#sbmt");
+        //-------------------------console.log(frm);
+        frm.username.focus();
+       
+       
+
+        frm.username.addEventListener("keypress",(e)=>{
+            if(e.key=="Enter"){
+                e.preventDefault();
+                frm.email.focus();
+
+            }
+         });
+         
+        frm.email.addEventListener("keypress",(e)=>{
+            if(e.key=="Enter"){
+                e.preventDefault();
+                frm.password.focus();
+
+            }
+         });
+        frm.password.addEventListener("keypress",(e)=>{
+            if(e.key=="Enter"){
+                e.preventDefault();
+                frm.cpassword.focus();
+
+            }
+         });
+        frm.cpassword.addEventListener("keypress",(e)=>{
+            if(e.key=="Enter"){
+                e.preventDefault();
+                frm.submit();
+               
+            }}
+        );
+
+        sbmt.addEventListener("mouseover",()=>{
+            sbmt.style.backgroundColor="red";
+            sbmt.style.color="black";
+        })
+        sbmt.addEventListener("mouseout",()=>{
+            sbmt.style.backgroundColor="black";
+            sbmt.style.color="white";
+        })
+    </script>
+
+    
+</body>
+</html>
