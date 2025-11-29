@@ -29,12 +29,21 @@
         //-------------------------console.log(frm);
         frm.username.focus();
        
-       
+        frm.username.style.backgroundColor="lightblue";
+        sbmt.addEventListener("click",()=>{
+            
+        })
 
         frm.username.addEventListener("keypress",(e)=>{
             if(e.key=="Enter"){
                 e.preventDefault();
+                // frm.username.style.backgroundColor="white";
+                frm.email.style.backgroundColor="lightBlue";
+                e.target.style.backgroundColor="lightgreen";
                 frm.email.focus();
+                let usr=frm.username.textContent;
+                console.log(usr);
+                localStorage.setItem("username",usr);
 
             }
          });
@@ -42,6 +51,8 @@
         frm.email.addEventListener("keypress",(e)=>{
             if(e.key=="Enter"){
                 e.preventDefault();
+                frm.password.style.backgroundColor="lightBlue";
+                e.target.style.backgroundColor="lightgreen";
                 frm.password.focus();
 
             }
@@ -49,6 +60,8 @@
         frm.password.addEventListener("keypress",(e)=>{
             if(e.key=="Enter"){
                 e.preventDefault();
+                frm.cpassword.style.backgroundColor="lightBlue";
+                e.target.style.backgroundColor="lightgreen";
                 frm.cpassword.focus();
 
             }
