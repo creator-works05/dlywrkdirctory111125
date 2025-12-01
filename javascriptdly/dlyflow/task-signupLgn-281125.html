@@ -41,9 +41,10 @@
                 frm.email.style.backgroundColor="lightBlue";
                 e.target.style.backgroundColor="lightgreen";
                 frm.email.focus();
-                let usr=frm.username.textContent;
+                let usr=frm.username.value;
                 console.log(usr);
                 localStorage.setItem("username",usr);
+                console.log(frm.username);
 
             }
          });
@@ -69,10 +70,16 @@
         frm.cpassword.addEventListener("keypress",(e)=>{
             if(e.key=="Enter"){
                 e.preventDefault();
-                frm.submit();
-               
-            }}
-        );
+                if(frm.username.value!=""){
+                    
+                    frm.submit();
+                    frm.reset();
+                }
+                else{
+                    frm.email.style.backgroundColor="red";
+                }
+            }
+        } );
 
         sbmt.addEventListener("mouseover",()=>{
             sbmt.style.backgroundColor="red";
@@ -82,6 +89,7 @@
             sbmt.style.backgroundColor="black";
             sbmt.style.color="white";
         })
+
     </script>
 
     
