@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .listBox{
+            display: flex;
+            flex-wrap: wrap;
+            gap:10px;
+        }
+        .stdFrame{
+            padding:20px;
+            margin:10px;
+            width: fit-content;
+            height: fit-content;
+            flex:0 0 1;
+            
+        }
+    </style>
+</head>
+<body>
+    <form id="frm">
+        <input type="text" name="stdntName" placeholder="Enter student Name"><br><br>
+        <input type="text" name="stdntGrade" placeholder="Enter student Grade"><br><br>
+        <input type="text" name="stdntSub" placeholder="Enter Subject"><br><br>
+        <button type="submit"> Add student</button><br><br>
+    </form>
+    <div id="studentList" class="listBox">
+
+    </div>
+</body>
+    <script>
+        class Students{
+            constructor(name,grade,subject){
+                this.name=name;
+                this.grade=grade;
+                this.subject=subject;
+            }
+        }
+        let form=document.querySelector("#frm");
+        let studentList=document.querySelector("#studentList");
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault();
+            let name=form.stdntName.value;
+            let grade=form.stdntGrade.value;
+            let subject=form.stdntSub.value;
+            let student=new Students(name,grade,subject);
+            let showStudent=document.createElement("div");
+            showStudent.classList.add("stdFrame");
+            // console.log(showStudent); checking if the class is created
+            showStudent.innerHTML=`<h1>Student</h1>
+                                <h2>Name : <span style="color=red text-decoration-style=dashed ">${student.name}</span></h2>
+                                <h2>Grade : <span style="color=red text-decoration-style=dashed ">${student.grade}</span></h2>
+                                <h2>Subject : <span style="color=red text-decoration-style=dashed ">${student.subject}</span></h2>
+                                
+                                `;
+            if(!name || !grade || !subject){
+                alert("fill the fields properly");
+                return;
+            }
+
+
+        
+            // console.log(showStudent);
+            console.log(studentList);
+            studentList.appendChild(showStudent);
+            form.reset();
+            
+
+
+
+        });
+    </script>
+</html>
