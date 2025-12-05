@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handling errors using try-catch block</title>
+</head>
+<body>
+    <input type="number" name="number" placeholder="type 1 if there any error in -- try" id="num">
+    
+    <script>
+        // try-catch BLOCK
+        let inpt= document.querySelector("#num");
+    
+        inpt.addEventListener("keypress",(e)=>{
+         e.preventDefault();
+         let check=inpt.value;
+        if(check=="1"){
+            var obj={
+                name:"Rahul",
+                parent:"shashi"
+
+
+            };
+           
+        }
+        try{
+            console.log(obj.name);
+            console.log(obj.parent);
+        }
+        catch(e){
+            console.log(e.message);
+        }
+
+    });    
+
+    </script>
+</body>
+</html>
