@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Working of a call back function </title>
+</head>
+<body>
+    <script>
+        function placeGift(callback){
+            setTimeout(()=>{
+                console.log("Gift is placed into the box ...");
+                callback();
+            },2000);
+        }
+        function wrapGift(callback){
+            setTimeout(()=>{
+                console.log("...Gift has been wrapped perfectly ...");
+
+                callback();
+            },2000);
+
+        }
+        function tieRibbon(callback){
+            setTimeout(()=>{
+                console.log("...Ribbon tied ...");
+                callback();
+            },2000);
+        }
+        function wishTag(callback){
+            setTimeout(()=>{
+                console.log("...Placed wish tag ...");
+                callback();
+            },2000);
+        }
+        placeGift(()=>{
+            wrapGift(()=>{
+                tieRibbon(()=>{
+                    wishTag(()=>{
+                        setTimeout(()=>{
+                            console.log("...Gift Box ready.");
+
+                        },2000)
+                    })
+                })
+            })
+        })
+    </script>
+</body>
+</html>

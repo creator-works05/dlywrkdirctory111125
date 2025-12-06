@@ -14,22 +14,25 @@
     
         inpt.addEventListener("keypress",(e)=>{
          e.preventDefault();
-         let check=inpt.value;
+         let check=e.key;
+         console.log("..............",check)
         if(check=="1"){
             var obj={
-                name:"Rahul",
-                parent:"shashi"
+                name:"Soman",
+                parent:"Shashi"
 
 
             };
            
         }
         try{
-            console.log(obj.name);
-            console.log(obj.parent);
+            console.log(obj);
+            console.log("son inte name",obj.name);
+            console.log("achante name",obj.parent);
         }
         catch(e){
-            console.log(e.message);
+            console.log("Error occured :",e.message,"catch block is executed");
+            return 0;
         }
 
     });    
