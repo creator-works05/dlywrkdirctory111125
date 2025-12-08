@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using then-catch</title>
+</head>
+
+<body>
+    <script>
+        setTimeout(() => {
+            let num=1
+
+            do{
+                if(num==1){
+
+                    console.log("sec :",num);
+                    num++;
+                }
+                else{
+                    setTimeout(()=>{
+                    console.log("sec :",num);
+                    num++;
+                    },num*1000);
+                }
+                
+            }
+            while(num<=4);
+            
+        },0);
+        function placeGift() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    let ifStatusVal=Math.random()*10;
+                    
+                    let ifStatus = ifStatusVal<9;
+                    console.log(ifStatusVal);
+                    console.log(ifStatus)
+                    
+                    if (ifStatus) {
+                        resolve("Gift placed");
+
+                    }
+                    else {
+                        reject("Something went wrong, Gift placement cancelled");
+
+                    }
+                }, 4000)
+
+
+            });
+
+
+
+        }
+        function wrapGift() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+
+                    resolve();
+                    console.log("Gift wrapped");
+
+                }, 4000);
+            })
+
+        }
+        function tieRibbon() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+
+                    resolve();
+                    console.log("Ribbon tied");
+
+                }, 2000);
+            })
+
+        }
+        function addGiftLabel() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+
+                    resolve();
+                    console.log("Gift labeled");
+
+                }, 2000);
+            })
+
+        }
+        function giftReady() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+
+                    resolve();
+                    console.log("Gift ready");
+
+                }, 2000);
+            })
+
+        }
+        // -----------------------------------------------------------------------------------------------------
+
+        placeGift()
+            .then((ifSts) => {
+                console.log(ifSts);
+                wrapGift();
+            })
+            .then(()=>{
+                wrapGift();
+            })
+            .then(()=>{
+                tieRibbon();
+            })
+            .then(()=>{
+                addGiftLabel();
+            })
+            .then(()=>{
+                giftReady();
+            })
+            .catch((elseSts)=>{
+                console.log(elseSts);
+            });
+    </script>
+</body>
+
+</html>
