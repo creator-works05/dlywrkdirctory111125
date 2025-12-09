@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function placeGift(){
+            return new Promise((resolve,reject)=>{
+                let ifStatus=Math.random()*10<8;
+                console.log("placeGift if Status :",ifStatus)
+                if(ifStatus){
+                    console.log("Gift placed--------------")
+                    resolve("Gift placed successfully");
+                    console.log("--------------Gift placed.")
+                }
+                else{
+                    reject("Something went wrong--=--=--=--=--=--=--=--=--=.")
+                }
+            })
+
+        }
+        function wrapGift(){
+            return new Promise((resolve,reject)=>{
+                let ifStatus=Math.random()*10<8;
+                console.log("wrapGift if Status :",ifStatus)
+                if(ifStatus){
+                    resolve("Gift wrapped successfully ");
+                    console.log("Gift wrapped successfully--")
+                }
+                else{
+                    reject("Something went wrong this operation is failed ")
+                }
+            })
+
+        }
+        function tieRibbon(){
+            return new Promise((resolve)=>{
+                resolve();
+                console.log("Added ribbon successfully");
+            })
+
+        }
+        function addLabel(){
+            return new Promise((resolve)=>{
+                resolve();
+                console.log("Added label successfully");
+
+            })
+
+        }
+        function giftReady(){
+            return new Promise((resolve)=>{
+                resolve();
+                console.log("Your Gift is ready");
+            })
+
+        }
+        async function asyncFunction() {
+            await placeGift();
+            await wrapGift();
+            await tieRibbon();
+            await addLabel();
+            await giftReady();
+            
+        }
+        asyncFunction();
+    </script>
+</body>
+</html>
