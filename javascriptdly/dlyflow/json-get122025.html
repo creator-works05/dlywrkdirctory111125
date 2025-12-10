@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get </title>
+</head>
+<body>
+    <script>
+        //Milestone 1=> Get data from data.json (AbsolutePath=> ./linkTo_/s-data/data.json)
+        async function getData() {
+            let response = await fetch('./linkTo_/s-data/data.json');
+            let fetch_data=await response.json();
+            console.log(fetch_data);
+            let thisArray=fetch_data.users;
+            console.log(thisArray);
+            thisArray.forEach(item => {
+                console.log(item.name);
+                
+                console.log(item.age);
+                
+            });
+        //(Milestone 1 : cleared ---1---)
+        //Milestone 2=> Print this data on an html Document
+            let div= document.createElement("div");
+            // console.log(div);
+            document.body.insertBefore(div,document.body.firstChild);
+            let num;
+            thisArray.forEach((item)=>{
+                div.innerHTML=`<p id="${num}"> name :<span>${item.name}</span> age</p>`;
+                
+            })
+
+            
+                
+            
+            
+        }
+        getData();
+    </script>
+    
+</body>
+</html>
