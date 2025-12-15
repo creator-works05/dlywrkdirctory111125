@@ -26,8 +26,8 @@
             // console.log(div);
             document.body.insertBefore(div,document.body.firstChild);
             let num;
-            thisArray.forEach((item)=>{
-                div.innerHTML=`<p id="${num}"> name :<span>${item.name}</span> age</p>`;
+            thisArray.forEach((item,i)=>{
+                div.innerHTML= div.innerHTML+`<p id"${i}"> name :<span>${item.name}</span> </p>`;
                 
             })
 

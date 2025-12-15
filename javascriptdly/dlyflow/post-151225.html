@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <form id="postForm">
+        <input type="text" name="name" placeholder="Enter name">
+        <input type="number" name="age" placeholder="Enter age">
+    <button>Add user</button>
+    </form>
+    
+</body>
+<script >
+    let getDiv = document.createElement("div");
+   
+
+    
+    let thisDiv=document.body.insertBefore(getDiv,document.body.firstChild);
+   thisDiv.setAttribute("id","thisDiv")
+
+    async function getData(){
+        let response = await fetch("http://localhost:3000/users");
+        let fetchedData=await response.json();
+        console.log(fetchedData);
+        let fetchedArray=fetchedData.users;
+        fetchedArray.forEach((users,index)=>{
+            let para=document.createElement("p")
+            console.log(para)
+            thisDiv.appendChild(para);
+            para.textContent=`${users.name} | ${users.age} | ${users.id} object:${user}`;
+
+
+        });
+    }
+    getData();
+</script>
+</html>
