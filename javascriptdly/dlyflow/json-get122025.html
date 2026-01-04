@@ -7,29 +7,21 @@
 </head>
 <body>
     <script>
-        //Milestone 1=> Get data from data.json (AbsolutePath=> ./linkTo_/s-data/data.json)
+       
         async function getData() {
-            let response = await fetch('./linkTo_/s-data/data.json');
+            let response = await fetch('http://localhost:3000/users');
             let fetch_data=await response.json();
-            console.log(fetch_data);
-            let thisArray=fetch_data.users;
-            console.log(thisArray);
-            thisArray.forEach(item => {
-                console.log(item.name);
-                
-                console.log(item.age);
-                
-            });
-        //(Milestone 1 : cleared ---1---)
-        //Milestone 2=> Print this data on an html Document
+            
             let div= document.createElement("div");
-            // console.log(div);
+           
             document.body.insertBefore(div,document.body.firstChild);
-            let num;
-            thisArray.forEach((item,i)=>{
-                div.innerHTML= div.innerHTML+`<p id"${i}"> name :<span>${item.name}</span> </p>`;
+            let num=0;
+            fetch_data.forEach((item,i)=>{
                 
-            })
+                div.innerHTML= div.innerHTML+`<p id="${i}"> name :<span>${item.name}</span> ${JSON.stringify(item)}</p>`;
+                num++;
+                console.log(num);
+            });
 
             
                 

@@ -1,0 +1,42 @@
+body{
+  background-color: darkslategray;
+  color: white;
+}
+h1{
+  color: lightcoral;
+  margin-top: 2px;
+  text-shadow:  1px 3px 14px rgba(0, 0, 0, 0.534);
+}
+
+#root >h1{
+  color: lightblue;
+  text-decoration:none ;
+  text-decoration-thickness: 0;
+  text-underline-offset: 8px;
+  text-decoration-color:rgba(0, 206, 209, 0.411);
+  text-align: center;
+  text-shadow: none;
+}
+#root h2{
+  color: darkturquoise;
+}
+.flexContainer{
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+  gap:9px;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+img{
+  width: 30vw;
+  aspect-ratio:1.85/1;
+  object-fit: cover;
+  object-position:center;
+  box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.534),
+              -3px -0.1px 14px rgba(173, 216, 230, 0.397);
+  
+
+
+}

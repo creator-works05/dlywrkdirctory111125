@@ -25,14 +25,15 @@
     async function getData(){
         let response = await fetch("http://localhost:3000/users");
         let fetchedData=await response.json();
-        console.log(fetchedData);
-        let fetchedArray=fetchedData.users;
-        fetchedArray.forEach((users,index)=>{
-            let para=document.createElement("p")
-            console.log(para)
+        console.log(fetchedData,"-----------------------------------");
+    
+        fetchedData.forEach((users,index)=>{
+            let para=document.createElement("p");
+            console.log(para);
             thisDiv.appendChild(para);
-            para.textContent=`${users.name} | ${users.age} | ${users.id} object:${user}`;
-
+            para.setAttribute("class","thisPara")
+            para.innerHTML=`name : ${users.name} | age :${users.age} | id : ${users.id} Object-details : ${JSON.stringify(fetchedData)} `;
+            
 
         });
     }
